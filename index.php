@@ -9,8 +9,26 @@
 <body>
    <h1>
         <?php   
-           echo "Hello World";
+            $greeting = "Hello";
+            echo "$greeting everybody!";
         ?>
+
+        <!-- Variables -->
+        <?php 
+            $name = "Dark Matter";
+            $read = true;
+        ?>
+
+        <!-- Condicionales -->
+        <h1>
+            <?php 
+                if($read == true) {
+                   echo "You have read " . $name;
+                }else {
+                   echo "You have Not read " . $name;
+                }
+            ?>
+        </h1>
    </h1> 
 </body>
 </html>
