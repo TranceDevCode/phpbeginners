@@ -29,6 +29,51 @@
                 }
             ?>
         </h1>
+
+        <!-- Arrays -->
+        <h1>Recomended books</h1>
+        <?php
+            $books = [
+                "The Lord Of The Rings",
+                "Batman",
+                "Flash Paradoja del tiempo",
+            ];
+        ?>
+        <ul>
+            <?php foreach($books as $book) {
+                echo "<li>$book</li>";
+                }                 
+            ?>
+        </ul>
+
+        <!-- Associative Arrays -->
+        <h1>Associative Arrays</h1>
+        <?php
+            $booksTwo = [
+                [
+                    'name' => "The Lord Of The Rings",
+                    'author' => "John",
+                    'purchaseUrl' => "http://www.example.com",
+                ],
+                [
+                    'name' => "Batman",
+                    'author' => "Bruce Wayne",
+                    'purchaseUrl' => "http://www.example.com",
+                ]
+            ];
+        ?>
+
+        <ul>
+            <?php foreach($booksTwo as $libro) : ?>
+                <li>
+                    <a href="<?php $libro['purchaseUrl'] ?>">
+                        <?= $libro['name']; ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+
+       
    </h1> 
 </body>
 </html>
